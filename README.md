@@ -13,11 +13,11 @@ A key focus of the assignment is demonstrating how one could go about gathering 
 
 Table of Contents 
 
-- [Assignment Description](## Assignment Description)
-- [Methods](## Methods)
-  * [Part 1](### Part 1)
-  * [Part 2](### Part 2)
-  * [Part 3](### Part 3)
+- [Assignment Description](#Assignment Description)
+- [Methods](#Methods)
+  * [Part 1](#Part 1)
+  * [Part 2](#Part 2)
+  * [Part 3](#Part 3)
 - [Operating the Scripts](## Operating the Scripts)
 - [Discussion of results](## Discussion of results )
 
