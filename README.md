@@ -11,23 +11,16 @@ This assignment aims to pull the techniques gathered throughout the visual analy
 
 A key focus of the assignment is demonstrating how one could go about gathering an image dataset to be used in computer vision tasks. This is in recognition that many computer vision projects use the same large datasets such as MNIST, ImageNet, or CIFAR-10. While these are useful resources, for true development to be made we need to be testing the tools used on these popular image collections on new sets of data, to evaluate both how useful and how generalisable the models are in their current state. These insights help the field to advance and allow us to apply the tools into many more fields, such as cultural data science. Therefore, much of this assignment looks at the process of how to collect a dataset and considers what problems can arise throughout this process. It then applies the collected dataset into an AlexNet CNN model to see how well it will perform. 
 
-Table of Contents 
+__Table of Contents__ 
 
 - [Assignment Description](#Assignment)
 - [Methods](#Methods)
   * [Part 1](#Part-1)
   * [Part 2](#Part-2)
   * [Part 3](#Part-3)
-- [Operating the Scripts](## Operating)
-- [Discussion of results](## Discussion)
+- [Operating the Scripts](#Operating)
+- [Discussion of results](#Discussion)
 
-
-
-- [Assignment Description](# Assignment Description)
-- [ ] Scripts and Data
-- [ ] Methods
-- [ ] Operating the Scripts
-- [ ] Discussion of results 
 
 ## Assignment Description
 
