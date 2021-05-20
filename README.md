@@ -267,4 +267,4 @@ Achieving an accuracy above chance is definitely not exciting in the world of ne
 ___Please Note: The data folder contains only a limited subset of the data due to the computational limits of GitHub___
 Picture credit: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> __
 
-README credit: Thanks to Kenneth Enevoldsen's guide on 'Pimp my Github'__
+readme credit: Thanks goes to Kenneth Enevoldsen's guide on 'Pimp my Github' for design inspiration 
