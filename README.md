@@ -1,5 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![describtor - e.g. python version](https://img.shields.io/badge/Python%20Version->=3.6-blue)](www.desired_reference.com)
 
+![keep-it-real-free](https://github.com/Orlz/Detecting_Banksy/blob/main/data/keep-it-real.png)
+
 # Banksy Street Art 
 
 ## A Binary CNN Classifier to detect Banksy's Streetart among other Street Graffiti
