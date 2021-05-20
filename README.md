@@ -13,6 +13,16 @@ A key focus of the assignment is demonstrating how one could go about gathering 
 
 Table of Contents 
 
+- [Assignment Description](## Assignment Description)
+- [Methods](## Methods)
+  * [Part 1](### Part 1)
+  * [Part 2](### Part 2)
+  * [Part 3](### Part 3)
+- [Operating the Scripts](## Operating the Scripts)
+- [Discussion of results](## Discussion of results )
+
+
+
 - [Assignment Description](# Assignment Description)
 - [ ] Scripts and Data
 - [ ] Methods
@@ -76,13 +86,13 @@ The assignment took a 3-part methodological approach:
 2. Pre-process the data
 3. Adapt the AlexNet CNN architecture into a binary style approach
 
-__Part 1__
+### Part 1
 The initial data collection involved using a set of Javascript functions to gather the image URLs (this process is outlined in the 'js_console.js' script found in the Data Collection folder). This created a txt file of images from each Google search whereby every image URL was placed on a new line in the txt file. This file was then fed into the 'Google_Image_Converter.py' script which transformed the URLs into jpeg images and stored them in the dedicated folder. The script could take multiple txt files but needs to be run for each class of data, enabling it to fit into a multiclass situation also. The 'Duplicate_Removal.py' script was then run on each classes image directory to calculate whether duplicates exist and remove them if they do. Finally, the Creating_Train_Test_Split.py script was run to split the data into a parent training and validation folder, with a folder containing the jpg images for each class within. The four scripts used in this process have been collected into the data_collection folder along with the URL txt files scraped from Google. 
 
-__Part 2__ 
+### Part 2
 The data was pre-processed in the Banksy_CNN.py script whereby the images were assigned a class label, split into new train and test sets, normalised by dividing by 255, and had their class labels binarised using sklearn's LabelBinarizer() function. 
 
-__Part 3__ 
+### Part 3 
 The data was then fed into an AlexNet inspired CNN architecture. The AlexNet is an award-winning architecture which builds upon the LeNet model by adding 3 extra layers. It was one of the first neural networks to start using the ReLU activation function, which it applies to each of its 8 layers, except the final output where a softmax activation is used. In this model's adaptation, the final softmax activation function is replaced with the sigmoid, to enable a binary classification. The 'adam' optimizer was used due to its flexible nature. 
 
 The model's architecture took the following form: 
