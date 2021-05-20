@@ -2,6 +2,8 @@
 
 # Banksy Street Art 
 
+<div align="center"><img src="https://github.com/Orlz/CDS_Visual_Analytics/blob/main/Portfolio/balloon.png"/></div>
+
 ## A Binary CNN Classifier to detect Banksy's Streetart among other Street Graffiti
 
 This assignment aims to pull the techniques gathered throughout the visual analytics course together into one line of exploration. The project takes the topic of graffiti artist Banksy and considers whether machine learning can shed new light into our understanding of his work and the hype surrounding his anonymous façade. Namely it asks, how unique is Banksy’s street art and how easily could it be faked by another? 
