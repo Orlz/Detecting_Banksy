@@ -31,12 +31,12 @@ A key focus of the assignment is demonstrating how one could go about gathering 
 This assignment collects 2 datasets of images, Banksy Streetart and Other Streetart, from Google images. It does this by scraping a list of image URLs using a short java-script, converts these images into images using a python script, removes duplicate images within each set using another python script and then creates a train and test set folder architecture. The structured datasets are then feed into an adapted AlexNet CNN model to see if the model can classify Banksy images from the other streetart. 
 
 
-Purpose of the assignment: 
+**Purpose of the assignment**
 1. Create a reusable pipeline to collect and process image data from Google Images 
 2. Consider what challenges we face using images collected in this raw sense 
 3. Develop upon the CNN architecture by implementing an adapted binary CNN architecture inspired by the AlexNet model to help answer our research question 
 
-Assignment task: 
+**Assignment task** 
 
 Part 1: Develop the pipelines to collect the dataset
 
