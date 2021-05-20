@@ -1,15 +1,16 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![describtor - e.g. python version](https://img.shields.io/badge/Python%20Version->=3.6-blue)](www.desired_reference.com)
 
-# Banksy Street Art  <div align="center"><img src="https://github.com/Orlz/CDS_Visual_Analytics/blob/main/Portfolio/graffiti_icon.png"/></div>
+# Banksy Street Art
 
 ## A Binary CNN Classifier to detect Banksy's Streetart among other Street Graffiti
-
 
 <div align="center"><img src="https://github.com/Orlz/CDS_Visual_Analytics/blob/main/Portfolio/graffiti_icon.png"/></div>
 
 This assignment aims to pull the techniques gathered throughout the visual analytics course together into one line of exploration. The project takes the topic of graffiti artist Banksy and considers whether machine learning can shed new light into our understanding of his work and the hype surrounding his anonymous façade. Namely it asks, how unique is Banksy’s street art and how easily could it be faked by another? 
 
 A key focus of the assignment is demonstrating how one could go about gathering an image dataset to be used in computer vision tasks. This is in recognition that many computer vision projects use the same large datasets such as MNIST, ImageNet, or CIFAR-10. While these are useful resources, for true development to be made we need to be testing the tools used on these popular image collections on new sets of data, to evaluate both how useful and how generalisable the models are in their current state. These insights help the field to advance and allow us to apply the tools into many more fields, such as cultural data science. Therefore, much of this assignment looks at the process of how to collect a dataset and considers what problems can arise throughout this process. It then applies the collected dataset into an AlexNet CNN model to see how well it will perform. 
+
+
 
 ## Table of Contents 
 
@@ -19,6 +20,8 @@ A key focus of the assignment is demonstrating how one could go about gathering 
   * [Part 2](#Part-2)
   * [Part 3](#Part-3)
 - [Operating the Scripts](#Operating)
+  * [Data Collection](#Modelling)
+  * [Modelling the CNN](#Data)
 - [Discussion of results](#Discussion)
 
 
@@ -37,6 +40,8 @@ Part 1: Develop the pipelines to collect the dataset
 Part 2: Pre-process the data (including removing duplicates and creating train-test splits) 
 
 Part 3: Adapt the AlexNet model architecture to suit a binary classification question and run model 
+
+
 
 ## Scripts and Data 
 
@@ -72,6 +77,7 @@ Banksy_CNN.py | Pre-processes data and runs it thorugh a CNN
 The “out” folder contains a png file of the model architecture (AlexNext_model.png), a classification report (classification_report.txt), a plot of the model performance (model_history.png) and a summary of the model (model_summary.txt). 
 
 
+
 ## Methods 
 
 The assignment took a 3-part methodological approach: 
@@ -79,11 +85,14 @@ The assignment took a 3-part methodological approach:
 2. Pre-process the data
 3. Adapt the AlexNet CNN architecture into a binary style approach
 
+
 ### Part-1
 The initial data collection involved using a set of Javascript functions to gather the image URLs (this process is outlined in the 'js_console.js' script found in the Data Collection folder). This created a txt file of images from each Google search whereby every image URL was placed on a new line in the txt file. This file was then fed into the 'Google_Image_Converter.py' script which transformed the URLs into jpeg images and stored them in the dedicated folder. The script could take multiple txt files but needs to be run for each class of data, enabling it to fit into a multiclass situation also. The 'Duplicate_Removal.py' script was then run on each classes image directory to calculate whether duplicates exist and remove them if they do. Finally, the Creating_Train_Test_Split.py script was run to split the data into a parent training and validation folder, with a folder containing the jpg images for each class within. The four scripts used in this process have been collected into the data_collection folder along with the URL txt files scraped from Google. 
 
+
 ### Part-2
 The data was pre-processed in the Banksy_CNN.py script whereby the images were assigned a class label, split into new train and test sets, normalised by dividing by 255, and had their class labels binarised using sklearn's LabelBinarizer() function. 
+
 
 ### Part-3 
 The data was then fed into an AlexNet inspired CNN architecture. The AlexNet is an award-winning architecture which builds upon the LeNet model by adding 3 extra layers. It was one of the first neural networks to start using the ReLU activation function, which it applies to each of its 8 layers, except the final output where a softmax activation is used. In this model's adaptation, the final softmax activation function is replaced with the sigmoid, to enable a binary classification. The 'adam' optimizer was used due to its flexible nature. 
@@ -94,6 +103,8 @@ INPUT => CONV => ReLU => MAXPOOL => CONV => ReLU => MAXPOOL => CONV => RELU => C
 FC => RELU => FC => RELU => OUTPUT => SIGMOID 
 
 The model was then evaluated and visualised to create a classification report and model plot, which can be found in the output folder. 
+
+
 
 ## Operating the Scripts 
 
@@ -126,7 +137,9 @@ And then activate the environment by typing:
 $ source Computer_Vision04/bin/activate
 ```
 
+
 **The scripts have been divided into 2 parts: The Data collection and The Modelling **
+
 
 ### The Data Collection
 
@@ -188,6 +201,7 @@ The script is a one-time use script and should not be attempted to be run multip
 $ python3 src/Creating_Train_Test_Split.py --validation_size 0.2
 ```
 
+
 ## Modelling the CNN 
 
 The image pre-processing, modelling, and evaluation of the model is all completed in one final script named Banksy_CNN.py. This can be found in the src folder. 
@@ -208,12 +222,16 @@ Letter call  | Parameter      | Required? | Input Type     | Description
 $ python3 src/Banksy_CNN.py --n_epochs 10
 ```
 
+
 ## Discussion of Results 
 
 The model achieved acceptable accuracy, with a weighted and macro average of 74% (24% above chance). A slight difference was detected between the classes with Banksy images achieving a marginally higher accuracy (74%) compared to the other street art (73%). The below plot indicates the model has potential to improve this accuracy to around 80%, if run with 10 epochs instead. This is because after 10 epochs, we see the validation accuracy begins to decline (green) while the validation loss dramatically increases (red), suggesting the model is over-fitting the data after 10 epochs. This is further supported by the still declining training loss curve (blue).
 
+
 ![model_hist](https://github.com/Orlz/Detecting_Banksy/blob/main/out/model_history_20.png)
+
 
 Achieving an accuracy above chance is definitely not exciting in the world of neural networks but it is perhaps surprising here, considering the images were fed in with a raw format and streetart images are typically complex and varying in style. It certainly supports Banksy’s persona and unique style – suggesting his work is indeed distinguishable from other great works of streetart. Nevertheless, it should be remembered that we are not clear on what features the model is picking up in the images, and accuracy rates such as these could be accredited to simple things such as the angle of the camera and zoom. This is quite likely in this context, where one could assume that images of Banksy art are taken from a closer angle and have less noise than perhaps a picture of a whole wall of streetart. Moreover, Banksy’s work is known for it’s simple colour schemes which are often greyscale with the occasional pop of colour. This is where running the model again on more processed data, after controlling for the zoom, colours, and orientation, could help to improve accuracy and validate the model. As the purpose of the assignment was to give the computer the same chance as a human, this has not been done for this context but is recommended for further explorations. Moreover, applying some visual feature mapping could provide critical insights into what the model is using to classify, which would guide the collection of a better dataset. 
 
 ___Please Note: The data folder contains only a limited subset of the data due to the computational limits of GitHub___
+___Picture credit: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> __
