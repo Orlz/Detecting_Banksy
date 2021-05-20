@@ -2,7 +2,7 @@
 
 # Banksy Street Art
 
-## A Binary CNN Classifier to detect Banksy's Streetart among other Street Graffiti
+## A Binary CNN Classifier to detect Banksy's Streetart 
 
 <div align="center"><img src="https://github.com/Orlz/CDS_Visual_Analytics/blob/main/Portfolio/graffiti_icon.png"/></div>
 
