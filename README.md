@@ -39,9 +39,7 @@ Purpose of the assignment:
 Assignment task: 
 
 Part 1: Develop the pipelines to collect the dataset 
-
 Part 2: Pre-process the data (including removing duplicates and creating train-test splits) 
-
 Part 3: Adapt the AlexNet model architecture to suit a binary classification question and run model 
 
 
