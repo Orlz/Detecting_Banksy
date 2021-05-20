@@ -1,7 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![describtor - e.g. python version](https://img.shields.io/badge/Python%20Version->=3.6-blue)](www.desired_reference.com)
 
-![keep-it-real-free](https://github.com/Orlz/Detecting_Banksy/blob/main/data/keep-it-real.png)
-
 # Banksy Street Art 
 
 ## A Binary CNN Classifier to detect Banksy's Streetart among other Street Graffiti
@@ -183,12 +181,12 @@ The image pre-processing, modelling, and evaluation of the model is all complete
 The script has a number of command line arguments which can be determined by the user, if desired. These are however optional: 
 
 ```
-| Letter call | Parameter      | Required? | Input Type     | Description                                         |
-| ----------- |:-------------: |:--------  |:-------------: |                                                     |
-|`-i`         | `--image_path` | No        | String         | Path to the full image directory                    |
-|`-t`         | `--test_size`  | No        | Float          | Decimal number between 0 and 1 indicating test size |
-|`-n`         | `--n_epochs`   | No        | Integer        | The number of epochs to train the model on          |
-|`-b`         | `--batch_size` | No        | Integer        | The size of the batch on which to train the model   |
+Letter call  | Parameter      | Required? | Input Type     | Description                                         
+-----------  | -------------  |--------   | -------------  |                                                     
+`-i`         | `--image_path` | No        | String         | Path to the full image directory                    
+`-t`         | `--test_size`  | No        | Float          | Decimal number between 0 and 1 indicating test size 
+`-n`         | `--n_epochs`   | No        | Integer        | The number of epochs to train the model on          
+`-b`         | `--batch_size` | No        | Integer        | The size of the batch on which to train the model   
 ```
 
 **Usage**
@@ -200,8 +198,8 @@ $ python3 src/Banksy_CNN.py --n_epochs 10
 
 The model achieved acceptable accuracy, with a weighted and macro average of 74% (24% above chance). A slight difference was detected between the classes with Banksy images achieving a marginally higher accuracy (74%) compared to the other street art (73%). The below plot indicates the model has potential to improve this accuracy to around 80%, if run with 10 epochs instead. This is because after 10 epochs, we see the validation accuracy begins to decline (green) while the validation loss dramatically increases (red), suggesting the model is over-fitting the data after 10 epochs. This is further supported by the still declining training loss curve (blue).
 
-## insert model image
+![model_hist](https://github.com/Orlz/Detecting_Banksy/blob/main/out/model_history_20.png)
 
 Achieving an accuracy above chance is definitely not exciting in the world of neural networks but it is perhaps surprising here, considering the images were fed in with a raw format and streetart images are typically complex and varying in style. It certainly supports Banksy’s persona and unique style – suggesting his work is indeed distinguishable from other great works of streetart. Nevertheless, it should be remembered that we are not clear on what features the model is picking up in the images, and accuracy rates such as these could be accredited to simple things such as the angle of the camera and zoom. This is quite likely in this context, where one could assume that images of Banksy art are taken from a closer angle and have less noise than perhaps a picture of a whole wall of streetart. Moreover, Banksy’s work is known for it’s simple colour schemes which are often greyscale with the occasional pop of colour. This is where running the model again on more processed data, after controlling for the zoom, colours, and orientation, could help to improve accuracy and validate the model. As the purpose of the assignment was to give the computer the same chance as a human, this has not been done for this context but is recommended for further explorations. Moreover, applying some visual feature mapping could provide critical insights into what the model is using to classify, which would guide the collection of a better dataset. 
 
-__Please Note: The data folder contains only a limited subset of the data due to the computational limits of GitHub__
+___Please Note: The data folder contains only a limited subset of the data due to the computational limits of GitHub___
