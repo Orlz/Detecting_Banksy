@@ -36,6 +36,8 @@ This assignment collects 2 datasets of images, Banksy Streetart and Other Street
 2. Consider what challenges we face using images collected in this raw sense 
 3. Develop upon the CNN architecture by implementing an adapted binary CNN architecture inspired by the AlexNet model to help answer our research question 
 
+
+
 **Assignment task** 
 
 Part 1: Develop the pipelines to collect the dataset
@@ -211,6 +213,7 @@ The script will need to be run on each class directory. For example, for this pr
 $ python3 src/Duplicate_Removal.py -r 1
 ```
 
+
 **Step 4: Create Train and Test set folder architecture (Optional and not needed for this script)**
 
 Once the data has been collected, we may want to arrange it into train and test set folders for use with other projects. To enable this, the Create_Train_Test_Split.py script was developed which can take any number of classes and create parent train and validation folders, with class image directories nested within. 
@@ -224,6 +227,7 @@ The script is a one-time use script and should not be attempted to be run multip
 ```bash
 $ python3 src/Creating_Train_Test_Split.py --validation_size 0.2
 ```
+
 
 
 ## Modelling the CNN 
@@ -261,6 +265,6 @@ The model achieved acceptable accuracy, with a weighted and macro average of 74%
 Achieving an accuracy above chance is definitely not exciting in the world of neural networks but it is perhaps surprising here, considering the images were fed in with a raw format and streetart images are typically complex and varying in style. It certainly supports Banksy’s persona and unique style – suggesting his work is indeed distinguishable from other great works of streetart. Nevertheless, it should be remembered that we are not clear on what features the model is picking up in the images, and accuracy rates such as these could be accredited to simple things such as the angle of the camera and zoom. This is quite likely in this context, where one could assume that images of Banksy art are taken from a closer angle and have less noise than perhaps a picture of a whole wall of streetart. Moreover, Banksy’s work is known for it’s simple colour schemes which are often greyscale with the occasional pop of colour. This is where running the model again on more processed data, after controlling for the zoom, colours, and orientation, could help to improve accuracy and validate the model. As the purpose of the assignment was to give the computer the same chance as a human, this has not been done for this context but is recommended for further explorations. Moreover, applying some visual feature mapping could provide critical insights into what the model is using to classify, which would guide the collection of a better dataset. 
 
 ___Please Note: The data folder contains only a limited subset of the data due to the computational limits of GitHub___
-___Picture credit: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> __
+Picture credit: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> __
 
-__README credit: Thanks to Kenneth Enevoldsen's guide on 'Pimp my Github'__
+README credit: Thanks to Kenneth Enevoldsen's guide on 'Pimp my Github'__
