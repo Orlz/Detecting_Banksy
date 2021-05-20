@@ -44,12 +44,12 @@ Details of this collection process can be found in the description on the Google
 The assignment includes 4 scripts, which have been broken up into separate modules to enable them to stand as stand-alone tools for the process of collecting data and fitting that to the question at hand. These scripts are as follows: 
 
 
-| | Script | Description|
-| |--------|:-----------|
-1 | Google_Image_Converter.py| Converts image URLs to jpg files  
-2 | Duplicate_Removal.py | Removes duplicate images using numerical representation
-3 | Creating_Train_Test_Split.py | Splits the datasets into train and validation folders 
-4 | Banksy_CNN.py | Pre-processes data and runs it thorugh a CNN  
+| Script | Description|
+|--------|:-----------|
+Google_Image_Converter.py| Converts image URLs to jpg files  
+Duplicate_Removal.py | Removes duplicate images using numerical representation
+Creating_Train_Test_Split.py | Splits the datasets into train and validation folders 
+Banksy_CNN.py | Pre-processes data and runs it thorugh a CNN  
 
 
 **Output**
