@@ -33,9 +33,9 @@ The data consists of 2 sets collected from Google images using the following ear
 “banksy art”                 | “streetart -banksy” 
 “banksy graffiti”            | “swoon graffiti” 
 “banksy political artwork”   | “daze graffiti”  
-                              | “blek le rat graffiti” 
-                               | “jean-michael basquiat graffiti”
-                               | “sheppard fairey graffiti”   
+ -                             | “blek le rat graffiti” 
+ -                              | “jean-michael basquiat graffiti”
+ -                              | “sheppard fairey graffiti”   
 
 Details of this collection process can be found in the description on the Google_Image_Converter.py script. 
 
