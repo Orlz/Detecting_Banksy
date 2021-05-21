@@ -42,7 +42,7 @@ import glob
 from contextlib import redirect_stdout
 
 #Functions from the utils folder
-import Styling_Banksy.utils.Banksy_CNN_utils as functions
+import Detecting_Banksy.utils.Banksy_CNN_utils as functions
 
 #Commandline functionality 
 import argparse
@@ -50,6 +50,7 @@ import argparse
 # Sklearn tools
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
 
 # TensorFlow tools
 import tensorflow as tf 
@@ -196,9 +197,6 @@ def main():
     
     #Ensure old session is cleared 
     K.clear_session()
-    
-    #Create a stop function if the model doesn't learn anymore (no learning after 3 epochs = stop) 
-    callback = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=3)
 
     #Build the model 
     model = Sequential()
@@ -246,7 +244,7 @@ def main():
     model_summary = model.summary()
     
     # name for saving model summary
-    model_path = os.path.join("..", "Styling_Banksy", "out", "model_summary.txt")
+    model_path = os.path.join("..", "Detecting_Banksy", "out", "model_summary.txt")
     # Save model summary
     with open(model_path, 'w') as f:
         with redirect_stdout(f):
@@ -254,7 +252,7 @@ def main():
     
     
     # name for saving plot
-    plot_path = os.path.join("..", "Styling_Banksy", "out", "AlexNet_model.png")
+    plot_path = os.path.join("..", "Detecting_Banksy", "out", "AlexNet_model.png")
     # Visualization of model
     plot_LeNet_model = plot_model(model,
                                   to_file = plot_path,
@@ -279,13 +277,14 @@ def main():
     Evaluating the model
     ====================
     """
-
-    # Plot loss/accuracy history of the model
-    functions.plot_history(H, n_epochs)
     
     # Evaluate model
     print("\n[INFO] Below is the classification report. This has been copied into the out directory\n")
     functions.evaluate_model(model, testX, testY, batch_size, label_names)
+
+    # Plot loss/accuracy history of the model
+    functions.plot_history(H, n_epochs)
+
     
     # User message
     print("\n That's you all done - woohoo!\n It looks like our friend Banksy is indeed quite unique!")
