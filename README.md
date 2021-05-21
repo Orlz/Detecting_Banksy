@@ -267,10 +267,9 @@ Achieving an accuracy above chance is definitely not exciting in the world of ne
 ___Please Note: The data folder contains only a limited subset of the data due to the computational limits of GitHub___
 
 
-Teaching credit: A huge thanks goes to our favourite Scottish instructor Ross Deans Kristiansen-McLachlan for the top class instructing and Kristoffer Laigaard Nielbo for putting together such a great course. 
+**Teaching credit:** A huge thanks goes to our favourite Scottish instructor Ross Deans Kristiansen-McLachlan for the top class instructing and Kristoffer Laigaard Nielbo for putting together such a great course. 
+
+**Picture credit:** <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 __
 
-Picture credit: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-__
-
-readme credit: Thanks goes to Kenneth Enevoldsen's guide on 'Pimp my Github' for design inspiration 
+**readme credit:** Thanks goes to Kenneth Enevoldsen's guide on 'Pimp my Github' for design inspiration 
