@@ -157,8 +157,7 @@ def train_AlexNet_model(model, trainX, trainY, testX, testY, n_epochs, batch_siz
                     validation_data=(testX, testY), 
                     batch_size=32, 
                     epochs=20, 
-                    verbose=1, 
-                    callbacks=[callback])
+                    verbose=1)
     return H
 
 """
@@ -184,7 +183,7 @@ def evaluate_model(model, testX, testY, batch_size, label_names):
 
     
     # name for saving report
-    report_path = os.path.join("..","Styling_Banksy", "out", "classification_report.txt")
+    report_path = os.path.join("..","Detecting_Banksy", "out", "classification_report.txt")
     
     # Save classification report
     with open(report_path, 'w', encoding='utf-8') as f:
@@ -207,7 +206,7 @@ def plot_history(H, n_epochs):
     It uses matplotlib tools to create the plot.
     """
     # name for saving output
-    figure_path = os.path.join("..","Styling_Banksy", "out", "model_history.png")
+    figure_path = os.path.join("..","Detecting_Banksy", "out", "model_history.png")
     # Visualize performance
     plt.style.use("fivethirtyeight")
     plt.figure()
