@@ -15,7 +15,7 @@ pip install pydot
 pip install tqdm
 python -m ipykernel install --user --name=$VENVNAME
 
-test -f requirements.txt && pip install requirements.txt
+test -f requirements.txt && pip install -r requirements.txt
 
 deactivate
 echo "build $VENVNAME"
