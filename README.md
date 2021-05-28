@@ -125,8 +125,8 @@ __1. Clone the repository__
 The easiest way to access the files is to clone the repository from the command line using the following steps 
 
 ```bash
-#clone repository as classification_benchmarks_orlz
-git clone https://github.com/Orlz/CDS_Visual_Analytics.git 
+#clone repository
+git clone https://github.com/Orlz/Detecting_Banksy.git
 
 ```
 
